@@ -11,6 +11,8 @@ To run the project, you can edit the connectionstring in appsetting.cs as you wa
 
 - 📫 How to reach me **mervpektas@hotmail.com**
 
+- 👨‍💻 All of my projects are available at [https://github.com/mervepektas](https://github.com/mervepektas)
+
 - 📄 Know about my experiences [www.linkedin.com/in/mervepektas](www.linkedin.com/in/mervepektas)
 
 <h3 align="left">Languages and Tools:</h3>
