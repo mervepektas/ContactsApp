@@ -1,0 +1,61 @@
+﻿@model Domain.Models.ContactInfo
+
+<form asp-action="Create" asp-area="Contacts" method="post">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="form-group">
+                <label>Adı:</label>
+                <input asp-for="FirstName" type="text" class="form-control required" tabindex="1">
+            </div>
+             <div class="form-group">
+                <label>Soyadı:</label>
+                <input asp-for="LastName" type="text" class="form-control required" tabindex="2">
+            </div>
+             <div class="form-group">
+                <label>Sicili:</label>
+                <input asp-for="EmployeeRegistrationNumber" type="number" class="form-control required" tabindex="3">
+            </div>
+             <div class="form-group">
+                <label>Ünitesi:</label>
+                <input asp-for="Department" type="text" class="form-control required" tabindex="4">
+            </div>
+            <div class="form-group">
+                <label>Fabrika/Bina:</label>
+                <input asp-for="Location" type="text" class="form-control required" tabindex="5">
+            </div>
+             <div class="form-group">
+                <label>Pozisyon:</label>
+                <input asp-for="Position" type="text" class="form-control required" tabindex="6">
+            </div>
+             <div class="form-group">
+                <label>İş Telefonu:</label>
+                <input asp-for="WorkPhoneNumber" type="number" class="form-control required" tabindex="7">
+            </div>
+             <div class="form-group">
+                <label>Diğer İş Telefonu:</label>
+                <input asp-for="OtherWorkPhoneNumber" type="number" class="form-control required" tabindex="8">
+            </div>
+            <div class="form-group">
+                <label>Kurumsal Telefonu:</label>
+                <input asp-for="CorporatePhoneNumber" type="number" class="form-control required" tabindex="9">
+            </div>
+             <div class="form-group">
+                <label>Telsiz Numarası:</label>
+                <input asp-for="WalkieTalkieNumber" type="number" class="form-control required" tabindex="10">
+            </div>
+             <div class="form-group">
+                <label>Email:</label>
+                <input asp-for="Email" type="text" class="form-control required" tabindex="11">
+            </div>
+            <div class="form-group">
+                <div asp-validation-summary="All" class="text-danger"></div>
+            </div>
+            <div class="card-footer">
+                <center>
+                    <button type="submit" class="btn btn-primary">Kaydet</button>
+                    <a asp-action="Index" asp-controller="Contact" class="btn btn-secondary">İptal</a>
+                </center>
+            </div>
+        </div>
+    </div>
+</form>

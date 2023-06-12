@@ -1,0 +1,129 @@
+﻿@model IEnumerable<Domain.Models.ContactInfo>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<head>
+    <link type='text/css' href='css/style.css' rel='stylesheet'/>
+</head>
+
+<div class="x_title" style="padding-top: 50px;">
+    <h2>Personel Blgileri<small></small></h2>
+    <div class="clearfix"></div>
+</div>
+<br />
+<div class="row justify-content-center">
+    <div class="row">
+        <div class="col-xs-5 col-sm-5 col-md-5">
+            <input type="text" id="filterInput" onkeyup="filterFunction()" placeholder="Filtrele" title="Filtrele">
+        </div>
+        <div class="col-xs-7 col-sm-7 col-md-7">
+            <a href="@Url.Action("Create", "Contact")" class="btn btn-primary a-btn-slide-text" style="float:right;" type="reset">
+                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                <span><strong>Yeni Oluştur</strong></span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<br />
+
+<div class="row justify-content-center">
+    <div class="col-auto">
+        <table id="employeeTable" class="table table-responsive table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.FirstName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.LastName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.EmployeeRegistrationNumber)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Department)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Location)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Position)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.WorkPhoneNumber)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.OtherWorkPhoneNumber)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.CorporatePhoneNumber)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.WalkieTalkieNumber)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Email)
+                    </th>
+                    <th>İşlem</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.FirstName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.LastName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(model => item.EmployeeRegistrationNumber)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(model => item.Department)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Location)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Position)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(model => item.WorkPhoneNumber)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(model => item.OtherWorkPhoneNumber)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.CorporatePhoneNumber)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.WalkieTalkieNumber)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(model => item.Email)
+                        </td>
+                        <td>
+                            <div class="edit-button-div" style="padding-bottom: 3px;">
+                                  <a href="@Url.Action("Edit", "Contact")/@item.Id " class="btn a-btn-slide-text" style="background-color:yellowgreen">
+                                <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                                <span><strong>Düzenle</strong></span>
+                            </a>
+                            </div>
+                            <a href="@Url.Action("Delete", "Contact")/@item.Id" class="btn a-btn-slide-text" style="background-color:orangered">
+                                <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                                <span><strong>Sil</strong></span>
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
